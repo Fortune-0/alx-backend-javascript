@@ -1,0 +1,1 @@
+ES6 data manipulation refers to the process of manipulating data using features and functionalities introduced in ECMAScript 2015 (ES6) or later versions of JavaScript. This includes techniques such as array manipulation methods like map, filter, and reduce, as well as new data structures and syntax that make it easier to work with and transform data in JavaScript code.
