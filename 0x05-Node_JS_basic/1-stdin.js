@@ -1,10 +1,3 @@
-/**
- * Interactive script to print user's name
- *  - Prompts user to enter user name
- *  - Display entered user name
- *  - Notifies user when exiting
- */
-
 const { stdout, stdin } = process;
 
 stdout.write('Welcome to Holberton School, what is your name? \n')
