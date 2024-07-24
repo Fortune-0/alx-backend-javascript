@@ -1,21 +1,12 @@
-/**
- * Interactive script to print user's name
- *  - Prompts user to enter user name
- *  - Display entered user name
- *  - Notifies user when exiting
- */
+process.stdin.setEncoding('utf8');
 
-const { stdout, stdin } = process;
+console.log('Welcome to Holberton School, what is your name?');
 
-stdout.write('Welcome to Holberton School, what is your name?\n');
-
-stdin.setEncoding('utf-8');
-stdin.on('readable', () => {
-  const name = stdin.read();
-  stdout.write(`Your name is: ${name}`);
-  process.exit();
+process.stdin.on('data', (data) => {
+  const name = data.trim();
+  console.log(`Your name is: ${name}`);
 });
 
-process.on('exit', () => {
-  stdout.write('This important software is now closing\n');
+process.stdin.on('end', () => {
+  console.log('This important software is now closing');
 });
