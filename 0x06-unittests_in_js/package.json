@@ -1,0 +1,35 @@
+{
+    "name": "alx-backend-javascript",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "mocha"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Fortune-0/alx-backend-javascript.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Fortune-0/alx-backend-javascript/issues"
+    },
+    "homepage": "https://github.com/Fortune-0/alx-backend-javascript#readme",
+    "devDependencies": {
+      "@babel/cli": "^7.24.6",
+      "@babel/core": "^7.24.6",
+      "@babel/node": "^7.24.6",
+      "@babel/preset-env": "^7.24.6",
+      "chai": "^5.1.1",
+      "eslint": "^7.30.0",
+      "jest": "^27.0.6",
+      "mocha": "^10.7.0",
+      "sinon": "^18.0.0"
+    },
+    "dependencies": {
+      "request": "^2.88.2"
+    }
+  }
+  
