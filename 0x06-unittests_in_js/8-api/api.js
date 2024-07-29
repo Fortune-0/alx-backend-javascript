@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, host, () => {
-  console.log(`Server is live, running at ${port}`);
+  console.log(`API available on localhost port ${port}`);
 });
 
 module.exports = app;
