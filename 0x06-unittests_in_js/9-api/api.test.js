@@ -33,4 +33,10 @@ describe('Cart page', function () {
       done();
     });
   })
+  it('check status code for incorrect url', function (done) {
+    request.get('http://localhost:7865/cart/abc', function (err, res, body) {
+      expect(res.statusCode).to.equal(404);
+      done();
+    });
+  })
 })
