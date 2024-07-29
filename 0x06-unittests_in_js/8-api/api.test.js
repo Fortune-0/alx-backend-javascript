@@ -1,24 +1,27 @@
-const chai = require('chai');
 const request = require('request');
+const expect = require('chai').expect;
 
-describe('Index Page', () => {
-    it('should return status code 200', (done) => {
-      chai.request(app)
-        .get('/')
-        .end((err, res) => {
-          expect(res).to.have.status(200);
-          done();
-        });
+describe('Index page', function () {
+  const options = {
+    url: 'http://localhost:7865/',
+    method: 'GET',
+  };
+  it('check correct status code', function (done) {
+    request(options, function (err, res, body) {
+      expect(res.statusCode).to.equal(200);
+      done();
     });
-  
-    it('should return the correct result', (done) => {
-      chai.request(app)
-        .get('/')
-        .end((err, res) => {
-          expect(res.text).to.equal('Welcome to the payment system!');
-          done();
-        });
-    });
-  
-    // Add other tests if needed
   });
+  it('check correct content', function (done) {
+    request(options, function (err, res, body) {
+      expect(body).to.contain('Welcome to the payment system');
+      done();
+    });
+  });
+  it('check correct content length', function (done) {
+    request(options, function (err, res, body) {
+      expect(res.headers['content-length']).to.equal('29');
+      done();
+    });
+  });
+});
