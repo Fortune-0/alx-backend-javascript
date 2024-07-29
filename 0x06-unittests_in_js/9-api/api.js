@@ -1,26 +1,18 @@
-/**
- * Simple express server
- */
 const express = require('express');
-
-const host = '127.0.0.1';
-const port = 7865;
 const app = express();
+const port = 7865;
 
-app.get('/', (req, res) => {
+app.get('/', function (req, res) {
   res.statusCode = 200;
-  res.send('Welcome to the payment system!');
+  res.send('Welcome to the payment system');
 });
 
-app.get('/cart/:id([0-9]+)', (req, res) => {
+app.get('/cart/:id([0-9]+)', function (req, res) {
   res.statusCode = 200;
-  res.send('Payment methods for cart :id ${req.params.id}');
-  // res.json({
-  //   id: parseInt(req.params.id),
-  //   items: ['Item 1', 'Item 2', 'Item 3'],
-  });
+  res.send(`Payment methods for cart ${req.params.id}`);
+});
 
-app.listen(port, host, () => {
+app.listen(port, function () {
   console.log(`API available on localhost port ${port}`);
 });
 
